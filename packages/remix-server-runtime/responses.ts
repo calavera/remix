@@ -1,13 +1,15 @@
+import type { Json, Redirect } from "./interface/responses";
+
 /**
  * This is a shortcut for creating `application/json` responses. Converts `data`
  * to JSON and sets the `Content-Type` header.
  *
  * @see https://remix.run/api/remix#json
  */
-export function json<Data>(
-  data: Data,
-  init: number | ResponseInit = {}
-): Response {
+export const json: Json = (
+  data,
+  init = {},
+) => {
   let responseInit: any = init;
   if (typeof init === "number") {
     responseInit = { status: init };
@@ -30,10 +32,10 @@ export function json<Data>(
  *
  * @see https://remix.run/api/remix#redirect
  */
-export function redirect(
-  url: string,
-  init: number | ResponseInit = 302
-): Response {
+export const redirect: Redirect = (
+  url,
+  init= 302,
+) => {
   let responseInit = init;
   if (typeof responseInit === "number") {
     responseInit = { status: responseInit };

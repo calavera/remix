@@ -1,17 +1,6 @@
-import type {
-  SessionData,
-  SessionStorage,
-  SessionIdStorageStrategy,
-} from "../sessions";
+import type { SessionData } from "../interface/sessions";
+import type { CreateMemorySessionStorage } from "../interface/sessions/memoryStorage";
 import { createSessionStorage } from "../sessions";
-
-interface MemorySessionStorageOptions {
-  /**
-   * The Cookie used to store the session id on the client, or options used
-   * to automatically create one.
-   */
-  cookie?: SessionIdStorageStrategy["cookie"];
-}
 
 /**
  * Creates and returns a simple in-memory SessionStorage object, mostly useful
@@ -22,9 +11,9 @@ interface MemorySessionStorageOptions {
  *
  * @see https://remix.run/api/remix#creatememorysessionstorage
  */
-export function createMemorySessionStorage({
+export const createMemorySessionStorage: CreateMemorySessionStorage = ({
   cookie,
-}: MemorySessionStorageOptions = {}): SessionStorage {
+} = {}) => {
   let uniqueId = 0;
   let map = new Map<string, { data: SessionData; expires?: Date }>();
 

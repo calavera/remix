@@ -8,10 +8,12 @@ export type {
 export type {
   CookieParseOptions,
   CookieSerializeOptions,
+} from "./cookies";
+export type {
   CookieSignatureOptions,
   CookieOptions,
   Cookie,
-} from "./cookies";
+} from './interface/cookies'
 export { createCookie, isCookie } from "./cookies";
 
 export type { AppLoadContext, AppData } from "./data";
@@ -50,7 +52,7 @@ export type {
   Session,
   SessionStorage,
   SessionIdStorageStrategy,
-} from "./sessions";
+} from "./interface/sessions";
 export { createSession, isSession, createSessionStorage } from "./sessions";
 export { createCookieSessionStorage } from "./sessions/cookieStorage";
 export { createMemorySessionStorage } from "./sessions/memoryStorage";
