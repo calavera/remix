@@ -1,0 +1,25 @@
+{
+  "name": "@remix-run/aws-amplify",
+  "description": "AWS Amplify server request handler for Remix",
+  "version": "1.2.3",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remix-run/remix",
+    "directory": "packages/remix-aws-amplify"
+  },
+  "bugs": {
+    "url": "https://github.com/remix-run/remix/issues"
+  },
+  "dependencies": {
+    "@architect/functions": "^5.0.2",
+    "@types/aws-lambda": "^8.10.82",
+    "@remix-run/node": "1.2.3",
+    "@remix-run/server-runtime": "1.2.3"
+  },
+  "devDependencies": {
+    "@types/architect__functions": "^3.13.6",
+    "@types/lambda-tester": "^3.6.1",
+    "lambda-tester": "^4.0.1"
+  }
+}

@@ -605,6 +605,7 @@ function getAdapterConfig(adapterName) {
 function remixServerAdapters() {
   return [
     ...getAdapterConfig("architect"),
+    ...getAdapterConfig("aws-amplify"),
     ...getAdapterConfig("cloudflare-pages"),
     ...getAdapterConfig("cloudflare-workers"),
     ...getAdapterConfig("express"),

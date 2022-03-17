@@ -38,6 +38,7 @@ async function run() {
     "netlify",
     "react",
     "serve",
+    "aws-amplify",
   ]) {
     // fix for https://github.com/remix-run/remix/actions/runs/1500713248
     await updatePackageConfig(name, (config) => {

@@ -24,7 +24,8 @@ export type ServerBuildTarget =
   | "vercel"
   | "cloudflare-pages"
   | "cloudflare-workers"
-  | "deno";
+  | "deno"
+  | "aws-amplify";
 
 export type ServerModuleFormat = "esm" | "cjs";
 export type ServerPlatform = "node" | "neutral";
@@ -328,6 +329,9 @@ export async function readConfig(
       break;
     case "vercel":
       serverBuildPath = "api/index.js";
+      break;
+    case "aws-amplify":
+      serverBuildPath = "amplify/hosting-compute/api/remix/index.js";
       break;
   }
   serverBuildPath = path.resolve(rootDirectory, serverBuildPath);

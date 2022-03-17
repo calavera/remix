@@ -25,6 +25,12 @@ module.exports = {
       setupFiles: ["<rootDir>/packages/remix-architect/__tests__/setup.ts"],
     },
     {
+      displayName: "remix-aws-amplify",
+      testEnvironment: "node",
+      testMatch: ["<rootDir>/packages/remix-aws-amplify/**/*-test.[jt]s?(x)"],
+      setupFiles: ["<rootDir>/packages/remix-aws-amplify/__tests__/setup.ts"],
+    },
+    {
       displayName: "remix-dev",
       testEnvironment: "node",
       testMatch: ["<rootDir>/packages/remix-dev/**/*-test.[jt]s?(x)"],

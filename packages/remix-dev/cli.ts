@@ -223,6 +223,7 @@ async function run() {
               { name: "Remix App Server", value: "remix" },
               { name: "Express Server", value: "express" },
               { name: "Architect (AWS Lambda)", value: "arc" },
+              { name: "AWS Amplify Hosting", value: "aws-amplify" },
               { name: "Fly.io", value: "fly" },
               { name: "Netlify", value: "netlify" },
               { name: "Vercel", value: "vercel" },

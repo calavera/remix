@@ -43,6 +43,7 @@ async function run() {
     "netlify",
     "react",
     "serve",
+    "aws-amplify",
   ]) {
     publish(path.join(buildDir, "@remix-run", name), tag);
   }

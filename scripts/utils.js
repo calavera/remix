@@ -9,8 +9,8 @@ let rootDir = path.resolve(__dirname, "..");
 let examplesDir = path.resolve(rootDir, "examples");
 
 let remixPackages = {
-  adapters: ["architect", "express", "netlify", "vercel"],
-  runtimes: ["cloudflare-workers", "cloudflare-pages", "node"],
+  adapters: ["architect", "aws-amplify", "express", "netlify", "vercel"],
+  runtimes: ["cloudflare-workers", "cloudflare-pages", "deno", "node"],
   core: ["dev", "server-runtime", "react", "eslint-config"],
   get all() {
     return [...this.adapters, ...this.runtimes, ...this.core, "serve"];
